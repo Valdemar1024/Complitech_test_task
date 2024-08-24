@@ -8,7 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import task.usermanager.dto.PageRequestDTO;
 import task.usermanager.dto.UserDTO;
@@ -24,7 +24,7 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
-    private final BCryptPasswordEncoder encoder;
+    private final PasswordEncoder encoder;
 
     public UserDTO create(UserDTO userDTO) {
         userDTO.setId(null);
