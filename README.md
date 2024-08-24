@@ -1,4 +1,5 @@
 Database: PostgreSQL with Liquibase.
+Java 21
 
 To start application:
 1. ./gradlew clean build
